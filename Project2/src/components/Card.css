@@ -8,6 +8,7 @@
 #CardTitle{
     text-align: left;
     padding: 1em;
+    padding-bottom: 0em;
     margin: 0em;
 }
 
@@ -18,6 +19,7 @@
 
 #PlanetDescription{
     padding: 1em;
+    text-align: left;
 }
 #PlanetWrapper{
     padding: 2em;
