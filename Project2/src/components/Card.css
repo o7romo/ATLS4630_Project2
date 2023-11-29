@@ -5,8 +5,22 @@
     flex-direction: column;
 }
 
+#CardTitle{
+    text-align: left;
+    padding: 1em;
+    margin: 0em;
+}
+
+#PlanetImage{
+    width: 30%;
+    height: auto;
+}
+
+#PlanetDescription{
+    padding: 1em;
+}
 #PlanetWrapper{
-    padding: 3em;
+    padding: 2em;
     display: flex;
     flex-direction: row;
 }
