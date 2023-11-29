@@ -21,8 +21,29 @@
     padding: 1em;
     text-align: left;
 }
-#PlanetWrapper{
-    padding: 2em;
+
+#DescHighlights{
+    display: flex;
+    flex-direction: column;
+}
+
+#Highlights{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+}
+
+#PlanetWrapper{
+    padding: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+    display: flex;
+    flex-direction: row;
+}
+
+.Highlight{
+    background-color: white;
+    color: black;
+    padding:1em;
+    border-radius: 1em;
 }
