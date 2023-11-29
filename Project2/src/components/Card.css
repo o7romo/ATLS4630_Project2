@@ -1,0 +1,12 @@
+#PlanetCard{
+    background-color: black;
+    border-radius: 3em;
+    display: flex;
+    flex-direction: column;
+}
+
+#PlanetWrapper{
+    padding: 3em;
+    display: flex;
+    flex-direction: row;
+}

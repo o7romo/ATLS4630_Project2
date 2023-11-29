@@ -8,10 +8,9 @@ function App() {
 
   return (
     <>
-      <PlanetCard></PlanetCard>
-     
+      <PlanetCard PlanetName={'The Sun'} ImgPath={'../src/assets/img/sun.png'}></PlanetCard>  
     </>
-  )
+  );
 }
 
 export default App
