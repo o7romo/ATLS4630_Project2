@@ -9,7 +9,7 @@ export default function PlanetCard({PlanetName, ImgPath, PlanetDescription, Dist
                 <div id="DescHighlights">
                 <p id="PlanetDescription">{PlanetDescription}</p>
                     <div id="Highlights">
-                        <p class="Highlight">Distance from Earth: {Distance}</p>
+                        <p class="Highlight"><span>Distance from Earth:</span> {Distance}</p>
                         <p class="Highlight">Diameter: {Diameter}</p>
                         <p class="Highlight">Number of moons: {Moons}</p>
                     </div>
