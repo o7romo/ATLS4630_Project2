@@ -6,20 +6,19 @@ import './App.css'
 import PlanetCard from './components/Card.jsx'
 import ModelCanvas from './components/3DModel.jsx'
 import {Canvas} from '@react-three/fiber'
+import {OrbitControls} from '@react-three/drei'
 
 
 function App() {
-  const modelScale=[0.0000000000001,0.00000000001,0.00000000001];
   return (
    
     <>
     <Canvas>
             <ambientLight/>
             <pointLight position={[10, 10, 10]}/>
-            <Suspense fallback={null}>
-              <ModelCanvas scale={modelScale}/>
-            </Suspense>
-            
+            <OrbitControls/>
+              <ModelCanvas scale={[.1,.1,.1]}/>
+          
           </Canvas>
 
       <PlanetCard 
