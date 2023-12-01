@@ -1,13 +1,27 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
+import React from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import PlanetCard from './components/Card.jsx'
+import ModelCanvas from './components/3DModel.jsx'
+import {Canvas} from '@react-three/fiber'
+
 
 function App() {
-
+  const modelScale=[0.0000000000001,0.00000000001,0.00000000001];
   return (
+   
     <>
+    <Canvas>
+            <ambientLight/>
+            <pointLight position={[10, 10, 10]}/>
+            <Suspense fallback={null}>
+              <ModelCanvas scale={modelScale}/>
+            </Suspense>
+            
+          </Canvas>
+
       <PlanetCard 
         PlanetName={'The Sun'} 
         ImgPath={'../src/assets/img/sun.png'}
