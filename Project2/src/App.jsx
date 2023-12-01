@@ -13,11 +13,12 @@ function App() {
   return (
    
     <>
-    <Canvas>
+    <h1 id="title">The Solar System</h1>
+    <Canvas style={{ width: '100%', height: '100vh' }}>
             <ambientLight/>
             <pointLight position={[10, 10, 10]}/>
             <OrbitControls/>
-              <ModelCanvas scale={[.1,.1,.1]}/>
+              <ModelCanvas scale={[.2,.2,.2]}/>
           
           </Canvas>
 
