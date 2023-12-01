@@ -90,6 +90,16 @@ function App() {
         >
       </PlanetCard> 
 
+      <PlanetCard
+        PlanetName={"Neptune"}
+        ImgPath={"../src/assets/img/neptune.png"}
+        PlanetDescription={"Neptune, the eighth and farthest planet from the sun in our solar system, is a captivating ice giant known for its striking deep-blue coloration. This gas giant, primarily composed of hydrogen, helium, and traces of methane, possesses a dynamic atmosphere featuring distinct cloud bands and a prominent dark storm system named the Great Dark Spot. Neptune's winds are some of the fastest in the solar system, reaching speeds of over 1,200 miles per hour. Despite its distant location, Neptune has been the subject of scientific curiosity, with space missions like Voyager 2 providing valuable insights into its unique features and atmospheric dynamics."}
+        Distance={"2.7519 billion miles"}
+        Diameter={"34,503 miles"}
+        Moons={"14 moons"}
+      >
+      </PlanetCard>
+
 
       
 
