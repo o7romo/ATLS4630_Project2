@@ -10,6 +10,7 @@ import {OrbitControls} from '@react-three/drei'
 
 
 function App() {
+
   return (
    
     <>
@@ -114,6 +115,13 @@ function App() {
       >
       </PlanetCard>
 
+    
+      <div>
+
+        <a href="src/quiz.html">
+          <button>quiz</button>
+        </a>
+      </div>
 
       
 

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<h1>Multiple Choice Quiz</h1>
+
+<div id="quiz-container">
+    <div id="question"></div>
+    <div id="options"></div>
+    <button onclick="nextQuestion()">Next</button>
+</div>
+
+<script>
+const quizData = [
+    {
+        question: "This planet is nicknamed 'The Red Planet' for it's striking red hue caused by a high percentage of iron content in the soil.",
+        options: ["a) Mercury", "b) Jupiter", "c) Venus", "d) Mars"],
+        correctAnswer: "d) Mars"
+    },
+    {
+        question: "This planet is an ice giant primarily composed of hydrogen, helium, and methane. its axis is tilted at 98 degrees which causes it to rotate on it's side.",
+        options: ["a) Uranus", "b) Jupiter", "c) Venus", "d) Mercury"],
+        correctAnswer: "a) Uranus"
+    },
+    {
+        question: "This gas giant is characterized by its pale yellow hue which is caused by ammonia crystals in the atmosphere. Its ring system is composed primarily of ice particles and rocky debris.",
+        options: ["a) Neptune", "b) Jupiter", "c) Saturn", "d) Mars"],
+        correctAnswer: "c) Saturn"
+    },
+    {
+        question: "This small planet completes an orbit around the sun every 88 day. It also has days as hot as 800 Degrees F and nights as cold as -290 Degrees F.",
+        options: ["a) Venus", "b) Mercury", "c) Jupiter", "d) Saturn"],
+        correctAnswer: "b) Mercury"
+    },
+    {
+        question: "This gas giant boasts the fastest winds in our solar system reaching speeds of up to 1,200 mph. The planet primarily composed of hydrogen, helium, and traces of methane, possesses a dynamic atmospherefeaturing distinct cloud bands and a prominent dark storm system named the Great Dark Spot.",
+        options: ["a) Uranus", "b) Neptune", "c) Pluto", "d) Earth"],
+        correctAnswer: "b) Neptune"
+    }
+];
+
+let currentQuestion = 0;
+
+function loadQuestion() {
+    const questionContainer = document.getElementById("question");
+    const optionsContainer = document.getElementById("options");
+
+    questionContainer.textContent = quizData[currentQuestion].question;
+    optionsContainer.innerHTML = "";
+
+    for (let i = 0; i < quizData[currentQuestion].options.length; i++) {
+        const optionButton = document.createElement("button");
+        optionButton.innerHTML = quizData[currentQuestion].options[i];
+        optionButton.addEventListener("click", function() {
+            checkAnswer(quizData[currentQuestion].options[i]);
+        });
+        optionsContainer.appendChild(optionButton);
+    }
+}
+
+function checkAnswer(userAnswer) {
+    const correctAnswer = quizData[currentQuestion].correctAnswer;
+    if (userAnswer === correctAnswer) {
+        alert("Correct!");
+    } else {
+        alert(`Incorrect! The correct answer is: ${correctAnswer}`);
+    }
+
+    currentQuestion++;
+
+    if (currentQuestion < quizData.length) {
+        loadQuestion();
+    } else {
+        alert("Quiz completed! You answered all questions.");
+    }
+}
+
+function nextQuestion() {
+    if (currentQuestion < quizData.length) {
+        loadQuestion();
+    } else {
+        alert("Quiz completed! You answered all questions.");
+    }
+}
+
+// Load the first question when the page loads
+loadQuestion();
+</script>
+
+</body>
+</html>
